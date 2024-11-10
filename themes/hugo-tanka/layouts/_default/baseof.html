@@ -43,9 +43,10 @@
     <link rel="shortcut icon"
         href="{{ if .Site.Params.faviconfile }}{{ .Site.Params.faviconfile | absURL }}{{ else }}{{ .Site.BaseURL }}images/favicon.png{{ end }}">
 
-    {{ if .Site.RSSLink }}
-    <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
+		{{ $siteTitle := .Site.Title }}
+		{{ with .OutputFormats.Get "RSS" }}
+		    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $siteTitle }}" />
+		{{ end }}
 </head>
 
 <body>
@@ -77,7 +78,6 @@
         </script>
     {{ end }}
 
-    {{ template "_internal/google_analytics_async.html" . }}
     {{ if .Site.Params.uselatex }}
         {{ partial "footer_mathjax.html" . }}
     {{ end }}
