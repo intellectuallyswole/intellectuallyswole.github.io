@@ -1,7 +1,8 @@
-layout: post
+---
 title: "'So Corporate'? That's a good sign."
-date: YYYY-MM-DD hh:mm:ss -0000
-categories: blog
+date: 2022-12-10T01:49:56-08:00
+draft: false
+---
 
 
 
