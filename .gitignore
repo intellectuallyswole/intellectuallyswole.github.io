@@ -1,1 +1,8 @@
+_site
+.sass-cache
+.jekyll-metadata
+drafts
+drafts/*
+_drafts/*
+unconsciousbios.tar
 .DS_Store
